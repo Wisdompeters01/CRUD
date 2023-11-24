@@ -12,9 +12,7 @@ const port: number = 4000;
 
 mainApp(app);
 
-const server = app.listen(port, () => {
-  mainConnection();
-});
+const server = app.listen(port, () => {});
 
 process.on("unhandledRejection", (reason: unknown) => {
   console.log(reason);
