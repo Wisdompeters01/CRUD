@@ -16,11 +16,6 @@ const server = app.listen(port, () => {
   mainConnection();
 });
 
-process.on("uncaughtException", (error: Error) => {
-  console.log(error);
-  process.exit(1);
-});
-
 process.on("unhandledRejection", (reason: unknown) => {
   console.log(reason);
   server.close(() => {
